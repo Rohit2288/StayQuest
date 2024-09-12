@@ -1,0 +1,82 @@
+@import "../../responsive.scss";
+
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      @include md {
+        padding: 0;
+      }
+
+      @include sm {
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 54px;
+
+        @include lg {
+          font-size: 48px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        @include md {
+          display: none;
+        }
+
+        @include sm {
+          display: none;
+        }
+
+        .box {
+          display: flex;
+          flex-direction: column;
+          align-items: center; // Center align the content
+          gap: 10px; // Add some space between the image and the text
+
+          img {
+            width: 50px; // Adjust the width of the icon
+            height: 50px; // Adjust the height of the icon
+          }
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #FEF9E7;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 100%;
+      }
+    }
+  }
+}
